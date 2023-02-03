@@ -43,3 +43,43 @@
 ## Confirming the PHP Version
 `php -v`
 ![php](./images/php-install.PNG)
+
+
+
+
+
+# STEP 4 - CREATING VIRTUAL HOST FOR WEBSITE USING APACHE
+
+### Creating directory
+`sudo mkdir /var/www/projectlamp`
+
+### assigning ownership of directory with current system user
+` sudo chown -R $USER:$USER /var/www/projectlamp`
+
+### Creating a new config in Apache's sites-available directory
+`sudo vi /etc/apache2/sites-available/projectlamp.conf`
+![v host ](./images/v-host.PNG)
+
+
+### Lisitng the new files in the sites-available directory
+`sudo ls /etc/apache2/sites-available`
+![v host ](./images/sites-aval.PNG)
+
+### Enabling the new virtual host
+`sudo a2ensite projectlamp`
+
+### Disabling the default website ubstakked with apache
+`sudo a2dissite 000-default`
+
+### Avoiding configuration error
+`sudo apache2ctl configtest`
+
+### Reloading Apache
+`sudo systemctl reload apache2`
+
+### Creating index.html file in the web root /var/www/projectlamp
+`sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html`
+
+### Dsiplaying the new webpage
+`http://<Public-IP-Address>:80`
+![web page ](./images/site-detail.PNG)
