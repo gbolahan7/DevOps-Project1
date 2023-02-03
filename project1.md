@@ -1,6 +1,6 @@
 ## Project 1 Documentation
 
-### STEP 1 - INSTALLING APACHE AND UPDATING THE FIREWALL
+# STEP 1 - INSTALLING APACHE AND UPDATING THE FIREWALL
 `sudo apt update`
 `sudo apt install apache2`
 
@@ -20,7 +20,8 @@
 
 
 
-### STEP 2 - INSTALLING MYSQL
+
+# STEP 2 - INSTALLING MYSQL
 `$ sudo apt install mysql-server`
 `$ sudo mysql`
 
@@ -32,3 +33,13 @@
 ![mysql](./images/mysql-install...PNG)
 
 
+
+
+# STEP 3 - INSTALLING PHP
+
+## Installing the necessary php and some dependency packages
+`sudo apt install php libapache2-mod-php php-mysql`
+
+## Confirming the PHP Version
+`php -v`
+![php](./images/php-install.PNG)
