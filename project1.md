@@ -83,3 +83,17 @@
 ### Dsiplaying the new webpage
 `http://<Public-IP-Address>:80`
 ![web page ](./images/site-detail.PNG)
+
+
+
+# STEP 5 - ENABLING PHP ON THE WEBSITE
+
+### Creating an index.php file in the custom web root folder
+`vim /var/www/projectlamp/index.php`
+![add php ](./images/php-enable.PNG)
+
+
+### Test script to confirm php installation
+`http://server_domain_or_IP/index.php`
+![add php ](./images/new-site-UI.PNG)
+
